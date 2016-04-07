@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation </title>
+	<script type = "text/javascript">
+	function validateForm() 
+	{
+    	var username = document.forms["myForm"]["fname"].value;
+    	var emailaddr = document.forms["myForm"]["email"].value;
+
+    	if (username == null || username == "") 
+    	{
+        	alert("You have not entered your name");
+        	//nameElem = document.getElementById('myname').;
+        	//nameElem.style.background = 'red';
+        	//document.myForm.fname.focus();
+        	return false;
+    	}
+    	if (emailaddr == null || emailaddr =="")
+    	{
+    		alert("Please enter your email address");
+    		//emailElem = getElementById('myemail');
+    		//emailElem.style.background = 'yellow';
+    		//document.myForm.email.focus();
+    		return false;
+    	}
+	}
+	</script>
+</head>
+<body>
+	<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+	Username: <input type="text" name="fname" id="myname"><br>
+	Email: <input type="text" name="email" id="myemail"><br>
+		<input type="submit" value="Login">
+		<input type="submit" value="Cancel">
+</form>
+</body>
+</html>
